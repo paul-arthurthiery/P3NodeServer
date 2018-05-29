@@ -11,7 +11,7 @@ exports.create = (req, res) => {
 
     // Create a Temperature
     const temperature = new Temperature({
-        title: req.body.title || "Untitled Temperature",
+        id: req.body.id || "Untitled Temperature",
         content: req.body.content
     });
 
