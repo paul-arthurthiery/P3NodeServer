@@ -8,8 +8,6 @@ const bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var temperatureRouter = require('./routes/temperature.routes');
-
 
 var app = express();
 
@@ -63,7 +61,7 @@ mongoose.connect(dbConfig.url)
     process.exit();
 });
 
-require('./app/routes/temperature.routes.js')(app);
+require('./routes/temperature.routes.js')(app);
 
 
 // listen for requests
