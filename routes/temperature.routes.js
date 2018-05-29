@@ -4,10 +4,10 @@ var router = express.Router();
 const temperatures = require('../controllers/temperature.controller.js');
 
 // Create a new Note
-router.post('/', temperatures.create);
+router.post('/temperatures', temperatures.create);
 
 // Retrieve all Notes
-router.get('/', temperatures.findAll);
+router.get('/temperatures', temperatures.findAll);
 
 // Retrieve a single Note with noteId
 router.get('/:temperatureId', temperatures.findOne);
