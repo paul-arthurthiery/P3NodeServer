@@ -1,18 +1,22 @@
-module.exports = (app) => {
+var express = require('express');
+var router = express.Router();
+
+
+module.exports = (router) => {
     const temperatures = require('../controllers/temperature.controller.js');
 
     // Create a new Note
-    app.post('/temperatures', temperatures.create);
+    router.post('/temperatures', temperatures.create);
 
     // Retrieve all Notes
-    app.get('/temperatures', temperatures.findAll);
+    router.get('/temperatures', temperatures.findAll);
 
     // Retrieve a single Note with noteId
-    app.get('/temperatures/:temperatureId', temperatures.findOne);
+    router.get('/temperatures/:temperatureId', temperatures.findOne);
 
     // Update a Note with noteId
-    app.put('/temperatures/:temperatureId', temperatures.update);
+    router.put('/temperatures/:temperatureId', temperatures.update);
 
     // Delete a Note with noteId
-    app.delete('/temperatures/:temperatureId', temperatures.delete);
+    router.delete('/temperatures/:temperatureId', temperatures.delete);
 }
