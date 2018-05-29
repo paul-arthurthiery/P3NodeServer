@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const TemperatureSchema = mongoose.Schema({
-    id: number,
+    id: Number,
     content: String
 }, {
     timestamps: true
