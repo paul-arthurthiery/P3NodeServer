@@ -11,11 +11,10 @@ exports.create = (req, res) => {
 
     // Create a Temperature
     const temperature = new Temperature({
-        id: req.body.id || "Untitled Temperature",
         content: req.body.content
     });
 
-    // Save Note in the database
+    // Save Temperature in the database
     temperature.save()
     .then(data => {
         res.send(data);
