@@ -10,12 +10,12 @@ router.post('/temperatures', temperatures.create);
 router.get('/temperatures', temperatures.findAll);
 
 // Retrieve a single temperature with temperatureId
-router.get('/:temperatureId', temperatures.findOne);
+router.get('/temperatures/:temperatureId', temperatures.findOne);
 
 // Update a Temperature with temperatureId
-router.put('/:temperatureId', temperatures.update);
+router.put('/temperatures/:temperatureId', temperatures.update);
 
 // Delete a Temperature with temperatureId
-router.delete('/:temperatureId', temperatures.delete);
+router.delete('/temperatures/:temperatureId', temperatures.delete);
 
 module.exports = router;

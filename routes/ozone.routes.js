@@ -10,12 +10,12 @@ router.post('/ozones', ozones.create);
 router.get('/ozones', ozones.findAll);
 
 // Retrieve a single ozone with ozoneId
-router.get('/:ozoneId', ozones.findOne);
+router.get('/ozones/:ozoneId', ozones.findOne);
 
 // Update a Ozone with ozoneId
-router.put('/:ozoneId', ozones.update);
+router.put('/ozones/:ozoneId', ozones.update);
 
 // Delete a Ozone with ozoneId
-router.delete('/:ozoneId', ozones.delete);
+router.delete('/ozones/:ozoneId', ozones.delete);
 
 module.exports = router;

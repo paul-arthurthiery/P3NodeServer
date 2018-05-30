@@ -10,12 +10,12 @@ router.post('/particles', particles.create);
 router.get('/particles', particles.findAll);
 
 // Retrieve a single particle with particleId
-router.get('/:particleId', particles.findOne);
+router.get('/particles/:particleId', particles.findOne);
 
 // Update a Particle with particleId
-router.put('/:particleId', particles.update);
+router.put('/particles/:particleId', particles.update);
 
 // Delete a Particle with particleId
-router.delete('/:particleId', particles.delete);
+router.delete('/particles/:particleId', particles.delete);
 
 module.exports = router;
